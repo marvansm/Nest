@@ -1,0 +1,130 @@
+.navigation {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.316);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .left {
+    button {
+      display: flex;
+      gap: 10px;
+      line-height: 44px;
+      border-radius: 5px;
+      padding: 0 20px;
+      font-size: 16px;
+      background: #3bb77e;
+      color: white;
+      border: none;
+      font-weight: 700;
+      transition: 0.2s ease-in-out;
+      &:hover {
+        background: #32ab72;
+      }
+      i {
+        font-size: 20px;
+      }
+    }
+  }
+  .menu {
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      color: #253d4e;
+
+      li {
+        line-height: 70px;
+        font-weight: 700;
+        transition: 0.2s ease-in-out;
+        &:hover {
+          color: #3bb77e;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .call-center {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    i {
+      font-size: 35px;
+    }
+    .text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      p {
+        font-size: 26px;
+        font-weight: 700;
+        color: #3bb77e;
+        line-height: 1;
+      }
+      h2 {
+        font-weight: 500;
+        font-size: 12px;
+        color: #7e7e7e;
+      }
+    }
+  }
+}
+.banner-bg {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+  border-radius: 20px;
+  padding: 70px 80px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  .text {
+    h2 {
+      color: #253d4e;
+      font-weight: 700;
+      line-height: 1.2;
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-transform: capitalize;
+      color: #7e7e7e;
+      font-size: 14px;
+      font-weight: 600;
+      background: none;
+      margin: 0;
+      border-radius: 0;
+      li {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+    }
+  }
+  .btns {
+    display: flex;
+    gap: 15px;
+    button {
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      border-radius: 30px;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05);
+      padding: 10px 20px;
+      border: 1px solid #ececec;
+      font-family: "Quicksand", sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: #3bb77e;
+      i {
+        font-size: 13px;
+      }
+    }
+  }
+}

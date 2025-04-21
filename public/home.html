@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nest - Multipurpose eCommerce HTML Template</title>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/remixicon/fonts/remixicon.css"
+    />
+    <link rel="stylesheet" href="../src/scss/style.css" />
+  </head>
+
+  <body>
+    <div class="loading">
+      <div class="loading-img">
+        <img src="../src/assets/elastic.gif" alt="" />
+      </div>
+    </div>
+    <button id="dark-mode">
+      <i class="ri-moon-line"></i>
+      <i class="ri-sun-line"></i>
+    </button>
+    <header>
+      <div class="container-fluid">
+        <nav>
+          <div class="logo">
+            <img src="../src/assets/logo.svg" alt="" />
+          </div>
+          <div class="search">
+            <select name="category" id="">
+              <option value="">All Categories</option>
+              <option value="">Milks and Dairies</option>
+              <option value="">Wines & Alcohol</option>
+              <option value="">Clothing & Beauty</option>
+              <option value="">Pet Foods & Toy</option>
+              <option value="">Fast food</option>
+            </select>
+            <input type="search" placeholder="Search for item..." />
+            <i class="ri-search-line"></i>
+          </div>
+          <div class="tools">
+            <ul>
+              <li><i class="ri-refresh-line"></i> Compare</li>
+              <li><i class="ri-heart-line"></i>Wishlist</li>
+              <li><i class="ri-shopping-cart-2-line"></i>Cart</li>
+              <li><i class="ri-user-line"></i>Account</li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section id="banner">
+        <div class="container-fluid">
+          <div class="navigation">
+            <div class="left">
+              <button>
+                <i class="ri-layout-grid-line"></i>Browse All Categories
+              </button>
+            </div>
+            <div class="menu">
+              <ul>
+                <li>Deals <i class="ri-arrow-down-s-line"></i></li>
+                <li>Home <i class="ri-arrow-down-s-line"></i></li>
+                <li>About <i class="ri-arrow-down-s-line"></i></li>
+                <li>Shop <i class="ri-arrow-down-s-line"></i></li>
+                <li>Mega menu <i class="ri-arrow-down-s-line"></i></li>
+                <li>Blog <i class="ri-arrow-down-s-line"></i></li>
+                <li>Pages <i class="ri-arrow-down-s-line"></i></li>
+                <li>Contact <i class="ri-arrow-down-s-line"></i></li>
+              </ul>
+            </div>
+            <div class="call-center">
+              <i class="ri-customer-service-line"></i>
+              <div class="text">
+                <p>1900 - 888</p>
+                <h2>24/7 Support Center</h2>
+              </div>
+            </div>
+          </div>
+          <div
+            class="banner-bg"
+            style="background-image: url(../src/assets/header-bg.png)"
+          >
+            <div class="text">
+              <h2>Snack</h2>
+              <ul>
+                <li>
+                  <i class="ri-home-5-line"></i>Home<i
+                    class="ri-arrow-drop-right-line"
+                  ></i>
+                </li>
+                <li>Shop<i class="ri-arrow-drop-right-line"></i></li>
+                <li>Snack</li>
+              </ul>
+            </div>
+            <div class="btns">
+              <button><i class="ri-close-large-line"></i>Cabbage</button>
+              <button><i class="ri-close-large-line"></i>Broccoli</button>
+              <button><i class="ri-close-large-line"></i>Artichoke</button>
+              <button><i class="ri-close-large-line"></i>Celery</button>
+              <button><i class="ri-close-large-line"></i>Spinach</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="products">
+        <div class="container-fluid">
+          <div class="head-text">
+            <h2>We found 29 items for you!</h2>
+            <div class="btns">
+              <button>
+                <i class="ri-layout-grid-line"></i>Show: 50<i
+                  class="ri-arrow-drop-down-line"
+                ></i>
+              </button>
+              <button>
+                <i class="ri-layout-grid-line"></i>Sort by: Featured<i
+                  class="ri-arrow-drop-down-line"
+                ></i>
+              </button>
+            </div>
+          </div>
+          <div id="product-boxes"></div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+
+    <script src="../node_modules/axios/dist/axios.min.js"></script>
+    <script src="../src/js/app.js"></script>
+  </body>
+</html>
