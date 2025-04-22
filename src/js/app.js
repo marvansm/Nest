@@ -1,7 +1,6 @@
 const productBoxes = document.querySelector("#product-boxes");
 const axiosInstance = axios.create({
   baseURL: "http://localhost:3000/",
-  timeout: 5000,
 });
 
 const getApiData = async (url) => {
@@ -42,15 +41,41 @@ const renderCards = (data) => {
                         <span class="new-price">${data?.price[0]["new-price"]}</span>
                   <span class="old-price">${data?.price[0]["old-price"]}</span>
                 </div>
-                <button>Add to card</button>
+                <button class="addtocard">Add to card</button>
                 <span><i class="ri-arrow-go-forward-fill"></i>Add Compare</span>
               </div>
             </div>`;
 };
+
+const addToCart = document.querySelectorAll(".addtocard");
+const count = document.querySelector(".count-pr");
+let productCount = 0;
+
 getApiData("products").then((data) => {
   data?.forEach((cards) => {
-    return (productBoxes.innerHTML += renderCards(cards));
+    productBoxes.innerHTML += renderCards(cards);
   });
+
+  const addToCart = document.querySelectorAll(".addtocard");
+  addToCart.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      localStorage.setItem("product", "count");
+      productCount++;
+      count.innerHTML = productCount;
+    });
+  });
+});
+
+const cartbtn = document.querySelector(".ri-shopping-cart-2-line");
+const yourProducts = document.querySelector(".add-to-cart");
+const close = document.querySelector(".close");
+
+cartbtn.addEventListener("click", () => {
+  yourProducts.style.display = "flex";
+  yourProducts.classList.add("transformCard");
+});
+close.addEventListener("click", () => {
+  yourProducts.style.display = "none";
 });
 
 const loading = document.querySelector(".loading");
@@ -58,7 +83,7 @@ const loading = document.querySelector(".loading");
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     loading.style.display = "none";
-  }, 1500);
+  }, 10);
 });
 
 const modeBtn = document.querySelector("#dark-mode");

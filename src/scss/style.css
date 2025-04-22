@@ -200,6 +200,22 @@ header nav .tools ul li i {
   font-size: 24px;
   color: #333;
 }
+header nav .tools ul .add-card {
+  position: relative;
+}
+header nav .tools ul .add-card .count {
+  display: flex;
+  position: absolute;
+  top: 24px;
+  left: 4px;
+}
+header nav .tools ul .add-card .count p {
+  background-color: red;
+  color: white;
+  font-size: 14px;
+  padding: 3px 5px;
+  border-radius: 0 0 10px 10px;
+}
 
 .navigation {
   padding: 10px 0;
@@ -517,6 +533,7 @@ header nav .tools ul li i {
   height: 50px;
   padding: 4px;
   border-radius: 15px 0 0 15px;
+  z-index: 9999999;
   border: none;
 }
 #dark-mode i {
@@ -628,4 +645,48 @@ header nav .tools ul li i {
 .darkItems .product-body button:hover {
   background-color: white !important;
   color: black !important;
+}
+
+.add-to-cart {
+  display: none;
+  position: fixed;
+  transform: translateX(100%);
+  right: 0;
+  width: 25%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.171);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  z-index: 999999;
+}
+.add-to-cart .content {
+  position: relative;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+}
+.add-to-cart .content .total {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 60px;
+  background-color: rgb(117, 115, 65);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.add-to-cart .content .close {
+  background-color: orange;
+  text-transform: uppercase;
+  font-weight: 700;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 60px;
+}
+
+.transformCard {
+  transform: translateX(0%);
+  transition: 0.5s ease-in-out;
 }/*# sourceMappingURL=style.css.map */
