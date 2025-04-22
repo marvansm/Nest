@@ -83,7 +83,7 @@ const loading = document.querySelector(".loading");
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     loading.style.display = "none";
-  }, 10);
+  }, 2000);
 });
 
 const modeBtn = document.querySelector("#dark-mode");
